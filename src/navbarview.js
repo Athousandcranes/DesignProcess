@@ -1,0 +1,6 @@
+class NavBarView {
+    constructor() {
+        
+    }
+
+}
