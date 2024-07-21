@@ -1,89 +1,120 @@
-/* Split the screen in half */
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+body {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: #efefef;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
 }
 
-/* Control the left side */
-.left {
-  left: 0;
-  background-color: #111;
+div .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #e5e5e5;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
 }
 
-/* Control the right side */
-.right {
-  right: 0;
-  background-color: red;
-}
-
-/* If you want the content centered horizontally and vertically */
-.centered {
+input .navbar {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  opacity: 0;
 }
 
-/* Style the image inside the centered container, if needed */
-.centered img {
-  width: 150px;
-  border-radius: 50%;
+label .navbar {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
 }
 
-/* Styling for NavBar. */
-.navbar {
-    height: 100%;
+label:hover {
+  background: #d8d8d8;
 }
 
-/* Styling for buttons. */
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
+label:active {
+  background: #ccc;
+}
+
+input:focus + label {
+  z-index: 1;
+}
+
+input:checked + label {
+  background: #fff;
+  color: #000;
+}
+
+
+@media (min-width: 600px) {
+  body {
+    padding: 60px 10px;
   }
-
-/* Styling for NotesTable. */
-.notes-panel table {
-    width:100%;
-    table-layout: fixed;
+}
+h1 {
+  margin: 0;
+  font-family: 'Bree Serif', serif;
+  font-size: 36px;
+}
+p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.navbar div {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #e5e5e5;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+.navbar input {
+  position: absolute;
+  opacity: 0;
+}
+.navbar label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+.navbar label:hover {
+  background: #d8d8d8;
+}
+.navbar label:active {
+  background: #ccc;
+}
+.navbar input:focus + .label {
+  z-index: 1;
+}
+.navbar input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+@media (min-width: 600px) {
+  .navbar label {
+    width: auto;
   }
-
-.notes-panel thead {
-    background-color: rgba(255,255,255,0.3);
 }
-
-.notes-panel tbody {
-    height:300px;
-    overflow-x:auto;
-    margin-top: 0px;
-    border: 1px solid rgba(255,255,255,0.3);
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
 }
-
-th{
-    padding: 20px 15px;
-    text-align: left;
-    font-weight: 500;
-    font-size: 12px;
-    color: #fff;
-    text-transform: uppercase;
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
 }
-
-td{
-    padding: 15px;
-    text-align: left;
-    vertical-align:middle;
-    font-weight: 300;
-    font-size: 12px;
-    color: #fff;
-    border-bottom: solid 1px rgba(255,255,255,0.1);
+.navbar input:checked + label + .panel {
+  display: block;
 }

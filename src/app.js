@@ -1,4 +1,4 @@
-import { NavBarView } from './src/navbarview.js';
+import { NavBarView } from './navbarview.js';
 
 class Model {
     constructor() {
@@ -8,8 +8,11 @@ class Model {
 
 class View {
     constructor() {
+        this.navBarView = new NavBarView();
+
         const root = document.getElementById('root');
         
+        root.append(this.navBarView.element);
     }
 };
 
