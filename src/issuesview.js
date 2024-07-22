@@ -1,5 +1,7 @@
 class IssuesView {
     constructor() {
+        this.addIssueListener = () => {};
+
         let className = 'issues';
 
         this.element = document.createElement('div');
@@ -8,7 +10,21 @@ class IssuesView {
         this.issueList = document.createElement('ul');
         this.issueList.setAttribute('class', className);
 
+        let issueText = document.createElement('input');
+        issueText.setAttribute('type', 'text');
+        issueText.id = 'issue-text';
+
+        let addIssueButton = document.createElement('input');
+        addIssueButton.setAttribute('class', className);
+        addIssueButton.setAttribute('type', 'button');
+        addIssueButton.value = 'Add Issue';
+        addIssueButton.addEventListener('click', () => {
+            this.addIssueListener(document.getElementById('issue-text').value);
+        });
+
         this.element.appendChild(this.issueList);
+        this.element.appendChild(issueText);
+        this.element.appendChild(addIssueButton);
     }
 
     addIssue(title, completed) {
