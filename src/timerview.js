@@ -4,6 +4,7 @@ class TimerView {
 
         this.element = document.createElement('div');
         this.element.setAttribute('class', className);
+        this.element.id = 'timer-div';
 
         let timerHeader = document.createElement('h1');
         timerHeader.setAttribute('class', className);

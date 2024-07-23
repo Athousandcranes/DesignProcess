@@ -38,6 +38,20 @@ class NavBarView {
         this.element.appendChild(goalsLabel);
         this.element.appendChild(timerButton);
         this.element.appendChild(timerLabel);
+
+        issuesButton.addEventListener('click', () => {this.showTab('issues-div');});
+        goalsButton.addEventListener('click', () => {this.showTab('goals-div');});
+        timerButton.addEventListener('click', () => {this.showTab('timer-div');});
+    }
+
+    showTab(tab) {
+        // TODO: this is not good........
+        document.getElementById('goals-div').style.display = 'none';
+        document.getElementById('issues-div').style.display = 'none';
+        document.getElementById('timer-div').style.display = 'none';
+
+        document.getElementById(tab).style.display = 'block';
+        console.log(document.getElementById('goals-div'))
     }
 };
 

@@ -32,11 +32,12 @@ class App {
         this.model = new Model();
         this.view = new View();
 
+
         this.model.issuesModel.onUpdate = (issues) => {
+            this.view.issuesView.resetIssues();
+
             for(let iter in issues) {
                 let issue = JSON.parse(issues[iter]);
-
-                this.view.issuesView.resetIssues();
                 this.view.issuesView.addIssue(issue.title, issue.completed);
             }
         };
@@ -44,6 +45,14 @@ class App {
             let newIssue = new Issue(title);
             this.model.issuesModel.addIssue(newIssue);
         };
+
+
+        let issues = this.model.issuesModel.getIssues();
+        this.view.issuesView.resetIssues();
+        for(let iter in issues) {
+            let issue = JSON.parse(issues[iter]);
+            this.view.issuesView.addIssue(issue.title, issue.completed);
+        }
     }
 };
 

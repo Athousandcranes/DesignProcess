@@ -4,6 +4,7 @@ class GoalsView {
 
         this.element = document.createElement('div');
         this.element.setAttribute('class', className);
+        this.element.id = 'goals-div';
         
         this.goalsList = document.createElement('ul');
         this.goalsList.setAttribute('class', className);

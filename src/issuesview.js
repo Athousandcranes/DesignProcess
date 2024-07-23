@@ -6,6 +6,7 @@ class IssuesView {
 
         this.element = document.createElement('div');
         this.element.setAttribute('class', className);
+        this.element.id = 'issues-div';
         
         this.issueList = document.createElement('ul');
         this.issueList.setAttribute('class', className);
