@@ -38,13 +38,16 @@ class App {
 
             for(let iter in issues) {
                 let issue = JSON.parse(issues[iter]);
-                this.view.issuesView.addIssue(issue.title, issue.completed);
+                this.view.issuesView.addIssue(issue.title, issue.completed, issue.uuid);
             }
         };
         this.view.issuesView.addIssueListener = (title) => {
             let newIssue = new Issue(title);
             this.model.issuesModel.addIssue(newIssue);
         };
+        this.view.issuesView.deleteIssueListener = (uuid) => {
+            this.model.issuesModel.removeIssue(uuid);
+        }
 
 
         let issues = this.model.issuesModel.getIssues();

@@ -22,6 +22,8 @@ class IssuesModel {
     }
 
     removeIssue(uuid) {
+        // TODO: remove test code
+        console.log(uuid)
         localStorage.removeItem(uuid);
 
         this.onUpdate(this.getIssues());

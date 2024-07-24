@@ -118,3 +118,29 @@ p {
 .navbar input:checked + label + .panel {
   display: block;
 }
+
+.issues li[selected=true] {
+  font-size: 36px;
+}
+
+
+.issues li {
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 10pt;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #656565;
+  transition: all .3s ease;
+
+  &:hover {
+    background: #5c7fed;
+    color: #fff;
+  }
+}
+
+li.issues[complete=true] {
+  text-decoration: line-through;
+}
