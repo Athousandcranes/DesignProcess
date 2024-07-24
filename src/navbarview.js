@@ -50,8 +50,9 @@ class NavBarView {
         document.getElementById('issues-div').style.display = 'none';
         document.getElementById('timer-div').style.display = 'none';
 
+        // TODO: remove test code
+        console.log('hello');
         document.getElementById(tab).style.display = 'block';
-        console.log(document.getElementById('goals-div'))
     }
 };
 

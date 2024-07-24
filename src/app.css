@@ -119,10 +119,13 @@ p {
   display: block;
 }
 
-.issues li[selected=true] {
+li.issues[selected=true] {
   font-size: 36px;
 }
 
+li.issues[completed=true] {
+  text-decoration: line-through;
+}
 
 .issues li {
   padding: 10px 15px;
@@ -139,8 +142,4 @@ p {
     background: #5c7fed;
     color: #fff;
   }
-}
-
-li.issues[complete=true] {
-  text-decoration: line-through;
 }

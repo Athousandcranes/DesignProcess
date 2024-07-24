@@ -24,6 +24,8 @@ class View {
         root.append(this.issuesView.element);
         root.append(this.goalsView.element);
         root.append(this.timerView.element);
+
+        this.navBarView.showTab('issues-div');
     }
 };
 

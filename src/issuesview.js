@@ -74,7 +74,7 @@ class IssuesView {
         newListItem.id = id;
         newListItem.innerHTML = title;
 
-        newListItem.addEventListener('click', (event) => {this.toggleSelected(event.target);});
+        newListItem.addEventListener('click', (event) => {this.selectIssue(event.target);});
 
         this.issueList.appendChild(newListItem);
     }
