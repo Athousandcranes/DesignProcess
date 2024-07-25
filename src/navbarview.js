@@ -6,29 +6,23 @@ class NavBarView {
         this.element.setAttribute('class', className);
 
         let issuesButton = document.createElement('input');
-        issuesButton.setAttribute('class', className);
         issuesButton.setAttribute('type', 'radio');
         issuesButton.id = 'issues-button';
         let issuesLabel = document.createElement('label');
-        issuesLabel.setAttribute('class', className);
         issuesLabel.setAttribute('for', 'issues-button');
         issuesLabel.innerHTML = 'Issues';
 
         let goalsButton = document.createElement('input');
-        goalsButton.setAttribute('class', className);
         goalsButton.setAttribute('type', 'radio');
         goalsButton.id = 'goals-button';
         let goalsLabel = document.createElement('label');
-        goalsLabel.setAttribute('class', className);
         goalsLabel.setAttribute('for', 'goals-button');
         goalsLabel.innerHTML = 'Goals';
 
         let timerButton = document.createElement('input');
-        timerButton.setAttribute('class', className);
         timerButton.setAttribute('type', 'radio');
         timerButton.id = 'timer-button';
         let timerLabel = document.createElement('label');
-        timerLabel.setAttribute('class', className);
         timerLabel.setAttribute('for', 'timer-button');
         timerLabel.innerHTML = 'Timer';
 
@@ -50,8 +44,6 @@ class NavBarView {
         document.getElementById('issues-div').style.display = 'none';
         document.getElementById('timer-div').style.display = 'none';
 
-        // TODO: remove test code
-        console.log('hello');
         document.getElementById(tab).style.display = 'block';
     }
 };

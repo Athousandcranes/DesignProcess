@@ -25,6 +25,7 @@ class IssuesView {
         addIssueButton.value = 'Add Issue';
         addIssueButton.addEventListener('click', () => {
             this.addIssueListener(document.getElementById('issue-text').value);
+            document.getElementById('issue-text').value = '';
         });
         
         let completeIssueButton = document.createElement('input');
@@ -32,7 +33,6 @@ class IssuesView {
         completeIssueButton.setAttribute('type', 'button');
         completeIssueButton.value = 'Complete Issue';
         completeIssueButton.addEventListener('click', () => {
-            // TODO: Fix complete button
             let issues = this.getSelected();
 
             for(let iter in issues) {
@@ -47,12 +47,9 @@ class IssuesView {
         deleteIssueButton.setAttribute('type', 'button');
         deleteIssueButton.value = 'Delete Issue';
         deleteIssueButton.addEventListener('click', () => {
-            // TODO: Fix delete button
             let issues = this.getSelected();
 
             for(let iter in issues) {
-                // TODO: Remove test code
-                console.log(issues)
                 this.deleteIssueListener(issues[iter].id);
                 this.deselectIssues();
             }
