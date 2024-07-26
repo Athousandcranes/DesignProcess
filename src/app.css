@@ -91,7 +91,7 @@ li:is(.issues, .goals)[completed=true] {
   text-decoration: line-through;
 }
 
-div.issues input {
+div input {
   background: #fff;
   backface-visibility: hidden;
   border-radius: .375rem;
@@ -117,19 +117,19 @@ div.issues input {
   touch-action: manipulation;
 }
 
-div.issues input:not(:disabled):hover {
+div input:not(:disabled):hover {
   transform: scale(1.05);
 }
 
-div.issues input:not(:disabled):hover:active {
+div input:not(:disabled):hover:active {
   transform: scale(1.05) translateY(.125rem);
 }
 
-div.issues input:focus {
+div input:focus {
   outline: 0 solid transparent;
 }
 
-div.issues input:focus:before {
+div input:focus:before {
   content: "";
   left: calc(-1*.375rem);
   pointer-events: none;
@@ -139,14 +139,14 @@ div.issues input:focus:before {
   user-select: none;
 }
 
-div.issues input:focus:not(:focus-visible) {
+div input:focus:not(:focus-visible) {
   outline: 0 solid transparent;
 }
 
-div.issues input:focus:not(:focus-visible):before {
+di input:focus:not(:focus-visible):before {
   border-width: 0;
 }
 
-div.issues input:not(:disabled):active {
+div input:not(:disabled):active {
   transform: translateY(.125rem);
 }
