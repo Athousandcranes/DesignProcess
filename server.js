@@ -14,7 +14,7 @@ http.createServer(function(req, res) {
   fs.readFile(filename, function(err, data) {
     if(err) {
       res.writeHead(404, {'Content-Type': 'text/html'});
-      return res.end("(404) I love Sharon Lesec.");
+      return res.end("(404) Some error... You probably need to include /index.html");
     }
     const url = req.url === '/' ? '/index.html' : req.url;
     if (req.url.includes('js')) res.setHeader('Content-Type', 'application/javascript');
